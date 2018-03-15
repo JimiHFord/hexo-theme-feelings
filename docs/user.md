@@ -6,116 +6,26 @@ A gorgeous responsive theme for Hexo blog framework
 
 Tranquilpeak theme is compatible with Hexo v3.0.x. The theme is compatible with higher versions of Hexo but these versions have some bugs with generation of relative urls so I recommend to use Hexo 3.0.x for the moment.
 
-This documentation will help you to install tranquilpeak-hexo-theme and configure it to use all features which it provides.  
 
-If you want to report a bug or ask a question, [create an issue](https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme/issues/new).
+## Summary
 
-## Summary ##
-
-- [General](#general)
-- [Features](#features)
-- [Requirements](#requirements)
 - [Installation](#installation)
 - [Hexo configuration](#hexo-configuration)
-    * [Enable post assets folder](#enable-post-assets-folder)
-    * [Disable relative links](#disable-relative-links)
-    * [Enable RSS feed](#enable-rss-feed)
-    * [Define global keywords](#define-global-keywords)
 - [Tranquilpeak configuration](#tranquilpeak-configuration)
-    - [Language configuration](#language-configuration)
-    - [Theme configuration](#theme-configuration)
-        * [Sidebar](#sidebar)
-        * [Header](#header)
-        * [Author](#author)
-        * [Customization](#customization)
-        * [Integrated services](#integrated-services)
-        * [Sharing options](#sharing-options)
-        * [Enable pages](#enable-pages)
 - [Integrated services configuration](#integrated-services-configuration)
-    * [Algolia](#algolia)
-    * [Google Analytics](#google-analytics)
-        * [Exclude hostname (localhost) while writing articles](#exclude-hostname-localhost-while-writing-articles)
-- [Quick & easy modifications](#quick--easy-modifications)  
-    * [Prerequisites](#prerequisites)
-    * [Change global style](#change-global-style)
-    * [Change code coloration (Highlight.js theme)](#change-code-coloration-highlightjs-theme)
-    * [Customize 404 error page](#customize-404-error-page)
+- [Modifying the theme](#modifying-the-theme)  
 - [Migrating posts](#migrating-posts)
-    * [v1.3.0 or lower to v1.4.0 or higher](#v130-or-lower-to-v140-or-higher)
 - [Writing posts](#writing-posts)
-    * [Front-matter settings](#front-matter-settings)
-    * [Define post excerpt](#define-post-excerpt)
-    * [Display all post content](#display-all-post-content)
-    * [Display table of contents](#display-table-of-contents)
-    * [Tags](#tags)
-        * [Alert](#alert)
-        * [Highlight text](#highlight-text)
-        * [Image](#image)
-        * [Tabbed code block](#tabbed-code-block)
-        * [Wide image](#wide-image)
-        * [Fancybox](#fancybox)
-- [Running](#running)  
 
-## General ##
+## Installation
 
-- **Author** : Louis Barranqueiro
-- **Version** : 1.11.0
-- **Compatibility** : Node v4 or later, Hexo v3.0.0 or later
-
-## Features ##
-
-**General features :**  
-
-- Fully responsive
-- Optimized for tablets & mobiles
-- Configurable menu of the sidebar
-- Pages to filter tags, categories and archives
-- Background cover image
-- Beautiful about page
-- Support Open Graph protocol
-- Support internationalization (i18
-- Easily customizable (fonts, colors, layout elements, code coloration, etc..
-  
-**Posts features :**  
-
-- Thumbnail image
-- Cover image
-- Responsive videos & images
-- Sharing options
-- Navigation menu
-- GitHub theme for code highlighting (customizable)
-- Image gallery
-- Tags for images (FancyBox), wide images, tabbed code blocks, highlighted text, alerts
-- Table of contents  
-  
-**Integrated services :**  
-
-- Disqus
-- Duoshuo
-- Google analytics
-- Baidu analytics
-- Gravatar
-- Algolia
-- Facebook Insights
-- Gitment
-
-## Requirements ##
-
-1. **Node** : v4 or higher. Download [Node](https://nodejs.org/download/)
-2. **Hexo CLI** : v0.1.4 or higher. Run `npm install hexo-cli -g`
-
-## Installation ##
-
-1. Download the latest version built and ready for production here : [hexo-theme-tranquilpeak-built-for-production-1.11.0](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/releases/download/v1.11.0/hexo-theme-tranquilpeak-built-for-production-1.11.0.zip)
+1. Download the latest version built and ready for production here : [hexo-theme-tranquilpeak releases](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/releases)
 2. Rename the folder in `tranquilpeak` and place it in `themes` folder of your Hexo blog
+3. Modify the theme in Hexo configuration file `_config.yml` by changing `theme` variable to `tranquilpeak`
 
-## Hexo configuration ##
+## Hexo configuration
 
-Modify the theme in `_config.yml` by changing `theme` variable  to `tranquilpeak`
-  
-If it's your first time using Hexo, please check [Hexo official documentation](https://hexo.io/docs/)
-
-### Enable post assets folder ###
+### Enable post assets folder
 
 If you want to take advantage of cover image, thumbnail image, and image gallery features, you have to enable post assets folder by setting `post_asset_folder` to  `true`in `_config.yml`.
 
@@ -520,19 +430,20 @@ Follow these steps, to add new filter :
 7. Select **Custom filter**, **Filter Field** : `Hostname`, **Filter Pattern** :  `(.*?localhost.*?)`
 8. Click on **Save** button
 
-## Quick & easy modifications ##
+## Modifying the theme
 
-### Prerequisites ###
+1. Run `npm install` to install dependencies
+2. Run `hexo s` then `npm run start` and start coding :)
 
-Since you are going to edit the theme, you have to install all the necessary to build it after changes : [Installation](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/docs/developer.md#installation)
+### Save changes
 
-**Run command in theme folder : `hexo-blog/themes/tranquilpeak`**
+1. Run `npm run prod` to build the theme
 
-### Change global style ###
+### Change global style
 
-If you want to change font families, font size, sidebar color, things like that, take a look at `source/_css/utils/_variables.scss` file. This file contains global variables used in this theme. **Build the theme after changes to see changes.**
+If you want to change font families, font size, sidebar color, things like that, take a look at `source/_css/utils/_variables.scss` file. This file contains global variables used in this theme. 
 
-### Change code coloration (Highlight.js theme) ###
+### Change code coloration (Highlight.js theme)
 
 Tranquilpeak integrate its own highlight.js theme inspired by GitHub. 
 Of course, you can replace it with an other theme found on highlight.js repository. Since Hexo use different CSS class names, all theme are not ready out of the box, but it is very easy to make them compatible. 
@@ -541,7 +452,6 @@ Follow these steps :
 
 1. Get your theme here : [Highlight.js theme](https://github.com/isagalaev/highlight.js/tree/master/src/styles) or create yours
 2. Follow guidelines in `source/_css/themes/hljs-custom.scss` file
-3. Build the theme with `npm run prod` or `grunt buildProd`. Learn more about Grunt tasks : [Grunt tasks](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/docs/developer.md#grunt-tasks)
 
 ### Customize 404 error page
 
@@ -824,6 +734,6 @@ E.g : `{% wide_image http://google.fr/images/image125.png "A beautiful sunrise" 
 
 `fancybox` tag is deprecated since Tranquilpeak 1.3. Please use `image` tag with `fancybox` class to generate them. More information here : [Image tag](#image) 
 
-## Running ##
+## Writing posts ##
 
 Run `hexo server` and start writing! :)

@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "hexo-util": "0.6.3",
-    "jsdom": "^8.1.0",
+    "jsdom": "11.6.2",
     "strip-indent": "2.0.0"
   },
   "engines": {

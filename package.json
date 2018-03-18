@@ -1,6 +1,6 @@
 {
-  "name": "hexo-theme-tranquilpeak",
-  "version": "1.11.0",
+  "name": "hexo-theme-feelings",
+  "version": "0.0.0",
   "description": "A gorgeous responsive theme for Hexo blog framework",
   "main": "Gruntfile.js",
   "scripts": {
@@ -13,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git"
+    "url": "https://github.com/JimiHFord/hexo-theme-feelings.git"
   },
   "keywords": [
     "hexo",
     "blog",
-    "tranquilpeak",
-    "tranquil",
+    "feelings",
+    "feel",
     "peak"
   ],
   "lint-staged": {
@@ -31,9 +31,9 @@
   "author": "Jimi Ford",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/issues"
+    "url": "https://github.com/JimiHFord/hexo-theme-feelings/issues"
   },
-  "homepage": "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak",
+  "homepage": "https://github.com/JimiHFord/hexo-theme-feelings",
   "devDependencies": {
     "bower": "^1.3.12",
     "eslint": "^2.11.1",
